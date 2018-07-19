@@ -1,8 +1,8 @@
 {
-  "name": "grapesjs-plugin-boilerplate",
-  "version": "0.1.8",
-  "description": "GrapesJS Plugin Boilerplate",
-  "main": "dist/YOUR-PLUGIN-NAME.min.js",
+  "name": "dnd_plugin",
+  "version": "0.1.10",
+  "description": "drag and drop editor",
+  "main": "dist/dnd_plugin.min.js",
   "scripts": {
     "lint": "eslint src",
     "v:patch": "npm version --no-git-tag-version patch",
@@ -19,7 +19,7 @@
     "boilerplate",
     "wysiwyg"
   ],
-  "author": "Artur Arseniev",
+  "author": "siddharth sharma",
   "license": "BSD-3-Clause",
   "babel": {
     "presets": [
