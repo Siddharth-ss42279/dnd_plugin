@@ -63,6 +63,7 @@ This boilerplate helps you quickly start a production ready plugin for GrapesJS.
 <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/grapesjs"></script>
 <script src="path/to/dnd_plugin.min.js"></script>
+<script srv="dist/gjs-block-basic.min.js">
 
 <div id="gjs"></div>
 
@@ -70,7 +71,7 @@ This boilerplate helps you quickly start a production ready plugin for GrapesJS.
   var editor = grapesjs.init({
       container : '#gjs',
       ...
-      plugins: ['dnd_plugin'],
+      plugins: ['dnd_plugin', 'gjs-block-basic', 'html-block'],
       pluginsOpts: {
         'dnd_plugin': {
           // options
