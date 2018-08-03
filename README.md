@@ -71,7 +71,7 @@ This boilerplate helps you quickly start a production ready plugin for GrapesJS.
   var editor = grapesjs.init({
       container : '#gjs',
       ...
-      plugins: ['dnd_plugin', 'gjs-block-basic', 'html-block'],
+      plugins: ['dnd_plugin'],
       pluginsOpts: {
         'dnd_plugin': {
           // options
