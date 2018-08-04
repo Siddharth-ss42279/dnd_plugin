@@ -29,6 +29,7 @@ This boilerplate helps you quickly start a production ready plugin for GrapesJS.
   * `new-block1`
   * `new-block1`
 ...
+ckeditor in included automatically through cdn
 
 
 
@@ -63,7 +64,7 @@ This boilerplate helps you quickly start a production ready plugin for GrapesJS.
 <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/grapesjs"></script>
 <script src="path/to/dnd_plugin.min.js"></script>
-<script srv="dist/gjs-block-basic.min.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.9.2/ckeditor.js"></script>
 
 <div id="gjs"></div>
 
