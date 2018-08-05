@@ -280,6 +280,112 @@ export default function (editor, opt = {}) {
     content: '<div data-html-code>Edit my HTML content</div>'
   });
 
+  //Text section
+  toAdd('text-sect') && bm.add('text-sect', {
+    label: c.labelTextSection,
+    category: c.category,
+    content: '<h1 class="heading">Insert title here</h1><p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>',
+    attributes: {class:'gjs-fonts gjs-f-h1p'}
+  });
+
+  //Quote
+  toAdd('quote') && bm.add('quote', {
+    label: opt.labelQuote,
+    category: c.category,
+    content: '<blockquote class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</blockquote>',
+    attributes: {class:'fa fa-quote-right'}
+    });
+
+    //link block
+    toAdd('link-block') && bm.add('link-block', {
+      label: c.labelLinkBlock,
+      category: "Extra",
+      attributes: {class:'fa fa-link'},
+      content: {
+        type: 'link',
+        editable: false,
+        droppable: true,
+        style: {
+          display: 'inline-block',
+          padding: '5px',
+          'min-height': '50px',
+          'min-width': '100px'
+        }
+      },
+    });
+
+    //grid or list items
+    let gridItem =
+      `<table class="grid-item-card">
+        <tr>
+          <td class="grid-item-card-cell">
+            <img class="grid-item-image" src="http://placehold.it/250x150/78c5d6/fff/" alt="Image"/>
+            <table class="grid-item-card-body">
+              <tr>
+                <td class="grid-item-card-content">
+                  <h1 class="card-title">Title here</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>`;
+    toAdd('grid-items') && bm.add('grid-items', {
+      label: c.labelGridItems,
+      category: c.category,
+      content: `<table class="grid-item-row">
+        <tr>
+          <td class="grid-item-cell2-l">${gridItem}</td>
+          <td class="grid-item-cell2-r">${gridItem}</td>
+        </tr>
+      </table>`,
+      attributes: {class:'fa fa-th'}
+    });
+    let listItem =
+      `<table class="list-item">
+        <tr>
+          <td class="list-item-cell">
+            <table class="list-item-content">
+              <tr class="list-item-row">
+                <td class="list-cell-left">
+                  <img class="list-item-image" src="http://placehold.it/150x150/78c5d6/fff/" alt="Image"/>
+                </td>
+                <td class="list-cell-right">
+                  <h1 class="card-title">Title here</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>`;
+    toAdd('list-items') && bm.add('list-items', {
+      label: opt.labelListItems,
+      category: c.category,
+      content: listItem + listItem,
+      attributes: {class:'fa fa-th-list'}
+    });
+
+    //divider
+    toAdd('divider') && bm.add('divider', {
+     label: c.labelDivider,
+     category: "Custom",
+     content: `<table style="width: 100%; margin-top: 10px; margin-bottom: 10px;">
+       <tr>
+         <td class="divider"></td>
+       </tr>
+     </table>
+     <style>
+     .divider {
+       background-color: rgba(0, 0, 0, 0.1);
+       height: 1px;
+     }
+     </style>`,
+     attributes: {class:'gjs-fonts gjs-f-divider'}
+   });
+
+
   addHTMLCodeEditor();
   addHTMLCodeComponent();
 

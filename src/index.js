@@ -4,7 +4,7 @@ import loadBlocks from './blocks';
 
 export default grapesjs.plugins.add('dnd_plugin', (editor, opts = {}) => {
   const options = {
-    blocks: ['column1', 'column2', 'column3', 'column3-7', 'text', 'link', 'image', 'video', 'map', 'h1-block', 'h2-block', 'h3-block', 'h4-block', 'html-code'],
+    blocks: ['column1', 'column2', 'column3', 'column3-7', 'text', 'link', 'image', 'video', 'map', 'h1-block', 'h2-block', 'h3-block', 'h4-block', 'html-code', 'text-sect', 'quote', 'link-block', 'grid-items', 'list-items', 'divider'],
     flexGrid: 0,
     stylePrefix: 'gjs-',
     addBasicStyle: true,
@@ -22,7 +22,13 @@ export default grapesjs.plugins.add('dnd_plugin', (editor, opts = {}) => {
     labelHead2: 'Heading 2',
     labelHead3: 'Heading 3',
     labelHead4: 'Heading 4',
-    labelHtml: 'html-code',
+    labelHtml: 'Html-Code',
+    labelTextSection: 'Text-Section',
+    labelQuote: 'Quote',
+    labelLinkBlock: 'Link Block',
+    labelGridItems: 'Grid Items',
+    labelListItems: 'List Items',
+    labelDivider: 'Divider',
     ...opts
   };
 
@@ -31,7 +37,7 @@ export default grapesjs.plugins.add('dnd_plugin', (editor, opts = {}) => {
 
   // Add blocks
   loadBlocks(editor, options);
-  //accordia style 
+  //accordian style
   const categories = editor.BlockManager.getCategories();
   categories.each(category => {
   	category.set('open', false).on('change:open', opened => {

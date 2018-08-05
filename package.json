@@ -1,6 +1,6 @@
 {
   "name": "dnd_plugin",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "drag and drop editor",
   "main": "dist/dnd_plugin.min.js",
   "scripts": {
